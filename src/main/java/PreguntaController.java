@@ -5,7 +5,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/preguntas")
-@CrossOrigin(origins = "https://nombre-frontend.herokuapp.com") // Cambia esto por la URL de tu frontend.
+@CrossOrigin(origins = "https://backendobligatorio-de6eeb5df337.herokuapp.com") // Cambia esto por la URL de tu frontend.
 public class PreguntaController {
     @Autowired
     private PreguntaRepository preguntaRepository;
