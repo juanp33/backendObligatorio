@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.sql.DataSource;
 import java.sql.Connection;
 import java.sql.SQLException;
-
+@CrossOrigin(origins = "*")
 @RestController
 public class HomeController {
 
@@ -21,7 +21,7 @@ public class HomeController {
     }
 
     @GetMapping("/check-db")
-    @CrossOrigin(origins = "*")
+
     public String checkDatabaseConnection() {
         try (Connection connection = dataSource.getConnection()) {
             if (connection.isValid(1)) {
