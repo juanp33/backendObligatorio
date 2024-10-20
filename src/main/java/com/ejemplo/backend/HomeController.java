@@ -1,6 +1,7 @@
 package com.ejemplo.backend;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -20,6 +21,7 @@ public class HomeController {
     }
 
     @GetMapping("/check-db")
+    @CrossOrigin(origins = "*")
     public String checkDatabaseConnection() {
         try (Connection connection = dataSource.getConnection()) {
             if (connection.isValid(1)) {
